@@ -1,0 +1,27 @@
+{
+  "inputSpec": "https://raw.githubusercontent.com/ory/sdk/master/spec/kratos/v1.2.0.json",
+  "generatorName": "csharp",
+  "library": "generichost",
+  "allowUnicodeIdentifiers": true,
+  "apiName": "Kratos",
+  "gitRepoId": "dotnet-kratos-client",
+  "gitUserId": "leancodepl",
+  "licenseId": "Apache-2.0",
+  "modelNamePrefix": "Kratos",
+  "netCoreProjectFile": true,
+  "nullableReferenceTypes": true,
+  "optionalAssemblyInfo": false,
+  "packageAuthors": "LeanCode",
+  "packageCompany": "LeanCode",
+  "packageCopyright": "LeanCode",
+  "packageDescription": "Ory Kratos client generated from official OpenAPI specification",
+  "packageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "packageTitle": "Ory Kratos Client",
+  "packageName": "LeanCode.Kratos.Client",
+  "packageVersion": "1.2.0",
+  "targetFramework": "net8.0",
+  "useSourceGeneration": false,
+  "validatable": false,
+  "zeroBasedEnums": true
+}
+  
