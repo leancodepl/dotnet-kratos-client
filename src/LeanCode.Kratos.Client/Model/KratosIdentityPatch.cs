@@ -132,7 +132,7 @@ namespace LeanCode.Kratos.Client.Model
                             break;
                         case "patch_id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                patchId = new Option<string?>(utf8JsonReader.GetGuid());
+                                patchId = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         default:
                             break;

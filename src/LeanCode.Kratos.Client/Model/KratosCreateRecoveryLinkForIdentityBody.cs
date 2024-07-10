@@ -122,7 +122,7 @@ namespace LeanCode.Kratos.Client.Model
                     {
                         case "identity_id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                identityId = new Option<string?>(utf8JsonReader.GetGuid());
+                                identityId = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         case "expires_in":
                             expiresIn = new Option<string?>(utf8JsonReader.GetString()!);

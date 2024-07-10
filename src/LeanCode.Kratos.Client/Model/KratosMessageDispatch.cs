@@ -246,11 +246,11 @@ namespace LeanCode.Kratos.Client.Model
                             break;
                         case "id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                id = new Option<string?>(utf8JsonReader.GetGuid());
+                                id = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         case "message_id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                messageId = new Option<string?>(utf8JsonReader.GetGuid());
+                                messageId = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         case "status":
                             string? statusRawValue = utf8JsonReader.GetString();
