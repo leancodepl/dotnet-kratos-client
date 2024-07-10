@@ -181,7 +181,7 @@ namespace LeanCode.Kratos.Client.Model
                             break;
                         case "use_flow_id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                useFlowId = new Option<string?>(utf8JsonReader.GetGuid());
+                                useFlowId = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         default:
                             break;

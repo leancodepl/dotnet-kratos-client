@@ -158,7 +158,7 @@ namespace LeanCode.Kratos.Client.Model
                     {
                         case "id":
                             if (utf8JsonReader.TokenType != JsonTokenType.Null)
-                                id = new Option<string?>(utf8JsonReader.GetGuid());
+                                id = new Option<string?>(utf8JsonReader.GetString());
                             break;
                         case "ip_address":
                             ipAddress = new Option<string?>(utf8JsonReader.GetString()!);
