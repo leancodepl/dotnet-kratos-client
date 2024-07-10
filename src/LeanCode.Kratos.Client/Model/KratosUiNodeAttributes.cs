@@ -252,6 +252,12 @@ namespace LeanCode.Kratos.Client.Model
 
             Option<KratosUiNodeAttributes.NodeTypeEnum?> nodeType = default;
 
+            KratosUiNodeInputAttributes? kratosUiNodeInputAttributes = null;
+            KratosUiNodeTextAttributes? kratosUiNodeTextAttributes = null;
+            KratosUiNodeImageAttributes? kratosUiNodeImageAttributes = null;
+            KratosUiNodeAnchorAttributes? kratosUiNodeAnchorAttributes = null;
+            KratosUiNodeScriptAttributes? kratosUiNodeScriptAttributes = null;
+
             Utf8JsonReader utf8JsonReaderDiscriminator = utf8JsonReader;
             while (utf8JsonReaderDiscriminator.Read())
             {
@@ -270,53 +276,53 @@ namespace LeanCode.Kratos.Client.Model
                         string? discriminator = utf8JsonReaderDiscriminator.GetString();
                         if (discriminator?.Equals("a") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeAnchorAttributes = utf8JsonReader;
+                            kratosUiNodeAnchorAttributes = JsonSerializer.Deserialize<KratosUiNodeAnchorAttributes>(ref utf8JsonReaderKratosUiNodeAnchorAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("img") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeImageAttributes = utf8JsonReader;
+                            kratosUiNodeImageAttributes = JsonSerializer.Deserialize<KratosUiNodeImageAttributes>(ref utf8JsonReaderKratosUiNodeImageAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("input") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeInputAttributes = utf8JsonReader;
+                            kratosUiNodeInputAttributes = JsonSerializer.Deserialize<KratosUiNodeInputAttributes>(ref utf8JsonReaderKratosUiNodeInputAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("script") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeScriptAttributes = utf8JsonReader;
+                            kratosUiNodeScriptAttributes = JsonSerializer.Deserialize<KratosUiNodeScriptAttributes>(ref utf8JsonReaderKratosUiNodeScriptAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("text") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeTextAttributes = utf8JsonReader;
+                            kratosUiNodeTextAttributes = JsonSerializer.Deserialize<KratosUiNodeTextAttributes>(ref utf8JsonReaderKratosUiNodeTextAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("uiNodeAnchorAttributes") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeAnchorAttributes = utf8JsonReader;
+                            kratosUiNodeAnchorAttributes = JsonSerializer.Deserialize<KratosUiNodeAnchorAttributes>(ref utf8JsonReaderKratosUiNodeAnchorAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("uiNodeImageAttributes") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeImageAttributes = utf8JsonReader;
+                            kratosUiNodeImageAttributes = JsonSerializer.Deserialize<KratosUiNodeImageAttributes>(ref utf8JsonReaderKratosUiNodeImageAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("uiNodeInputAttributes") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeInputAttributes = utf8JsonReader;
+                            kratosUiNodeInputAttributes = JsonSerializer.Deserialize<KratosUiNodeInputAttributes>(ref utf8JsonReaderKratosUiNodeInputAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("uiNodeScriptAttributes") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeScriptAttributes = utf8JsonReader;
+                            kratosUiNodeScriptAttributes = JsonSerializer.Deserialize<KratosUiNodeScriptAttributes>(ref utf8JsonReaderKratosUiNodeScriptAttributes, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("uiNodeTextAttributes") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUiNodeTextAttributes = utf8JsonReader;
+                            kratosUiNodeTextAttributes = JsonSerializer.Deserialize<KratosUiNodeTextAttributes>(ref utf8JsonReaderKratosUiNodeTextAttributes, jsonSerializerOptions);
                         }
                     }
                 }
@@ -354,35 +360,20 @@ namespace LeanCode.Kratos.Client.Model
             if (nodeType.IsSet && nodeType.Value == null)
                 throw new ArgumentNullException(nameof(nodeType), "Property is not nullable for class KratosUiNodeAttributes.");
 
-            if ( != null)
-                return new KratosUiNodeAttributes();
+            if (kratosUiNodeInputAttributes != null)
+                return new KratosUiNodeAttributes(kratosUiNodeInputAttributes);
 
-            if ( != null)
-                return new KratosUiNodeAttributes();
+            if (kratosUiNodeTextAttributes != null)
+                return new KratosUiNodeAttributes(kratosUiNodeTextAttributes);
 
-            if ( != null)
-                return new KratosUiNodeAttributes();
+            if (kratosUiNodeImageAttributes != null)
+                return new KratosUiNodeAttributes(kratosUiNodeImageAttributes);
 
-            if ( != null)
-                return new KratosUiNodeAttributes();
+            if (kratosUiNodeAnchorAttributes != null)
+                return new KratosUiNodeAttributes(kratosUiNodeAnchorAttributes);
 
-            if ( != null)
-                return new KratosUiNodeAttributes();
-
-            if ( != null)
-                return new KratosUiNodeAttributes();
-
-            if ( != null)
-                return new KratosUiNodeAttributes();
-
-            if ( != null)
-                return new KratosUiNodeAttributes();
-
-            if ( != null)
-                return new KratosUiNodeAttributes();
-
-            if ( != null)
-                return new KratosUiNodeAttributes();
+            if (kratosUiNodeScriptAttributes != null)
+                return new KratosUiNodeAttributes(kratosUiNodeScriptAttributes);
 
             throw new JsonException();
         }

@@ -181,6 +181,11 @@ namespace LeanCode.Kratos.Client.Model
 
             Option<KratosContinueWith.ActionEnum?> action = default;
 
+            KratosContinueWithVerificationUi? kratosContinueWithVerificationUi = null;
+            KratosContinueWithSetOrySessionToken? kratosContinueWithSetOrySessionToken = null;
+            KratosContinueWithSettingsUi? kratosContinueWithSettingsUi = null;
+            KratosContinueWithRecoveryUi? kratosContinueWithRecoveryUi = null;
+
             Utf8JsonReader utf8JsonReaderDiscriminator = utf8JsonReader;
             while (utf8JsonReaderDiscriminator.Read())
             {
@@ -199,43 +204,43 @@ namespace LeanCode.Kratos.Client.Model
                         string? discriminator = utf8JsonReaderDiscriminator.GetString();
                         if (discriminator?.Equals("set_ory_session_token") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithSetOrySessionToken = utf8JsonReader;
+                            kratosContinueWithSetOrySessionToken = JsonSerializer.Deserialize<KratosContinueWithSetOrySessionToken>(ref utf8JsonReaderKratosContinueWithSetOrySessionToken, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("show_recovery_ui") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithRecoveryUi = utf8JsonReader;
+                            kratosContinueWithRecoveryUi = JsonSerializer.Deserialize<KratosContinueWithRecoveryUi>(ref utf8JsonReaderKratosContinueWithRecoveryUi, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("show_settings_ui") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithSettingsUi = utf8JsonReader;
+                            kratosContinueWithSettingsUi = JsonSerializer.Deserialize<KratosContinueWithSettingsUi>(ref utf8JsonReaderKratosContinueWithSettingsUi, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("show_verification_ui") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithVerificationUi = utf8JsonReader;
+                            kratosContinueWithVerificationUi = JsonSerializer.Deserialize<KratosContinueWithVerificationUi>(ref utf8JsonReaderKratosContinueWithVerificationUi, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("continueWithRecoveryUi") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithRecoveryUi = utf8JsonReader;
+                            kratosContinueWithRecoveryUi = JsonSerializer.Deserialize<KratosContinueWithRecoveryUi>(ref utf8JsonReaderKratosContinueWithRecoveryUi, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("continueWithSetOrySessionToken") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithSetOrySessionToken = utf8JsonReader;
+                            kratosContinueWithSetOrySessionToken = JsonSerializer.Deserialize<KratosContinueWithSetOrySessionToken>(ref utf8JsonReaderKratosContinueWithSetOrySessionToken, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("continueWithSettingsUi") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithSettingsUi = utf8JsonReader;
+                            kratosContinueWithSettingsUi = JsonSerializer.Deserialize<KratosContinueWithSettingsUi>(ref utf8JsonReaderKratosContinueWithSettingsUi, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("continueWithVerificationUi") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosContinueWithVerificationUi = utf8JsonReader;
+                            kratosContinueWithVerificationUi = JsonSerializer.Deserialize<KratosContinueWithVerificationUi>(ref utf8JsonReaderKratosContinueWithVerificationUi, jsonSerializerOptions);
                         }
                     }
                 }
@@ -273,29 +278,17 @@ namespace LeanCode.Kratos.Client.Model
             if (action.IsSet && action.Value == null)
                 throw new ArgumentNullException(nameof(action), "Property is not nullable for class KratosContinueWith.");
 
-            if ( != null)
-                return new KratosContinueWith();
+            if (kratosContinueWithVerificationUi != null)
+                return new KratosContinueWith(kratosContinueWithVerificationUi);
 
-            if ( != null)
-                return new KratosContinueWith();
+            if (kratosContinueWithSetOrySessionToken != null)
+                return new KratosContinueWith(kratosContinueWithSetOrySessionToken);
 
-            if ( != null)
-                return new KratosContinueWith();
+            if (kratosContinueWithSettingsUi != null)
+                return new KratosContinueWith(kratosContinueWithSettingsUi);
 
-            if ( != null)
-                return new KratosContinueWith();
-
-            if ( != null)
-                return new KratosContinueWith();
-
-            if ( != null)
-                return new KratosContinueWith();
-
-            if ( != null)
-                return new KratosContinueWith();
-
-            if ( != null)
-                return new KratosContinueWith();
+            if (kratosContinueWithRecoveryUi != null)
+                return new KratosContinueWith(kratosContinueWithRecoveryUi);
 
             throw new JsonException();
         }

@@ -165,6 +165,9 @@ namespace LeanCode.Kratos.Client.Model
 
             Option<KratosUpdateVerificationFlowBody.MethodEnum?> method = default;
 
+            KratosUpdateVerificationFlowWithLinkMethod? kratosUpdateVerificationFlowWithLinkMethod = null;
+            KratosUpdateVerificationFlowWithCodeMethod? kratosUpdateVerificationFlowWithCodeMethod = null;
+
             Utf8JsonReader utf8JsonReaderDiscriminator = utf8JsonReader;
             while (utf8JsonReaderDiscriminator.Read())
             {
@@ -183,23 +186,23 @@ namespace LeanCode.Kratos.Client.Model
                         string? discriminator = utf8JsonReaderDiscriminator.GetString();
                         if (discriminator?.Equals("code") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateVerificationFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateVerificationFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateVerificationFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateVerificationFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("link") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateVerificationFlowWithLinkMethod = utf8JsonReader;
+                            kratosUpdateVerificationFlowWithLinkMethod = JsonSerializer.Deserialize<KratosUpdateVerificationFlowWithLinkMethod>(ref utf8JsonReaderKratosUpdateVerificationFlowWithLinkMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateVerificationFlowWithCodeMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateVerificationFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateVerificationFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateVerificationFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateVerificationFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateVerificationFlowWithLinkMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateVerificationFlowWithLinkMethod = utf8JsonReader;
+                            kratosUpdateVerificationFlowWithLinkMethod = JsonSerializer.Deserialize<KratosUpdateVerificationFlowWithLinkMethod>(ref utf8JsonReaderKratosUpdateVerificationFlowWithLinkMethod, jsonSerializerOptions);
                         }
                     }
                 }
@@ -237,17 +240,11 @@ namespace LeanCode.Kratos.Client.Model
             if (method.IsSet && method.Value == null)
                 throw new ArgumentNullException(nameof(method), "Property is not nullable for class KratosUpdateVerificationFlowBody.");
 
-            if ( != null)
-                return new KratosUpdateVerificationFlowBody();
+            if (kratosUpdateVerificationFlowWithLinkMethod != null)
+                return new KratosUpdateVerificationFlowBody(kratosUpdateVerificationFlowWithLinkMethod);
 
-            if ( != null)
-                return new KratosUpdateVerificationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateVerificationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateVerificationFlowBody();
+            if (kratosUpdateVerificationFlowWithCodeMethod != null)
+                return new KratosUpdateVerificationFlowBody(kratosUpdateVerificationFlowWithCodeMethod);
 
             throw new JsonException();
         }
