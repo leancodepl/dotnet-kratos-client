@@ -143,6 +143,12 @@ namespace LeanCode.Kratos.Client.Model
 
             Option<string?> method = default;
 
+            KratosUpdateRegistrationFlowWithPasswordMethod? kratosUpdateRegistrationFlowWithPasswordMethod = null;
+            KratosUpdateRegistrationFlowWithOidcMethod? kratosUpdateRegistrationFlowWithOidcMethod = null;
+            KratosUpdateRegistrationFlowWithWebAuthnMethod? kratosUpdateRegistrationFlowWithWebAuthnMethod = null;
+            KratosUpdateRegistrationFlowWithCodeMethod? kratosUpdateRegistrationFlowWithCodeMethod = null;
+            KratosUpdateRegistrationFlowWithPasskeyMethod? kratosUpdateRegistrationFlowWithPasskeyMethod = null;
+
             Utf8JsonReader utf8JsonReaderDiscriminator = utf8JsonReader;
             while (utf8JsonReaderDiscriminator.Read())
             {
@@ -161,53 +167,53 @@ namespace LeanCode.Kratos.Client.Model
                         string? discriminator = utf8JsonReaderDiscriminator.GetString();
                         if (discriminator?.Equals("code") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("oidc") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithOidcMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithOidcMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithOidcMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithOidcMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("passKey") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithPasskeyMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithPasskeyMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithPasskeyMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithPasskeyMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("password") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithPasswordMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithPasswordMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithPasswordMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithPasswordMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("webauthn") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithWebAuthnMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithWebAuthnMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithWebAuthnMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithWebAuthnMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRegistrationFlowWithCodeMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRegistrationFlowWithOidcMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithOidcMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithOidcMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithOidcMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithOidcMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRegistrationFlowWithPasskeyMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithPasskeyMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithPasskeyMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithPasskeyMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithPasskeyMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRegistrationFlowWithPasswordMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithPasswordMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithPasswordMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithPasswordMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithPasswordMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRegistrationFlowWithWebAuthnMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRegistrationFlowWithWebAuthnMethod = utf8JsonReader;
+                            kratosUpdateRegistrationFlowWithWebAuthnMethod = JsonSerializer.Deserialize<KratosUpdateRegistrationFlowWithWebAuthnMethod>(ref utf8JsonReaderKratosUpdateRegistrationFlowWithWebAuthnMethod, jsonSerializerOptions);
                         }
                     }
                 }
@@ -243,35 +249,20 @@ namespace LeanCode.Kratos.Client.Model
             if (method.IsSet && method.Value == null)
                 throw new ArgumentNullException(nameof(method), "Property is not nullable for class KratosUpdateRegistrationFlowBody.");
 
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
+            if (kratosUpdateRegistrationFlowWithPasswordMethod != null)
+                return new KratosUpdateRegistrationFlowBody(kratosUpdateRegistrationFlowWithPasswordMethod);
 
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
+            if (kratosUpdateRegistrationFlowWithOidcMethod != null)
+                return new KratosUpdateRegistrationFlowBody(kratosUpdateRegistrationFlowWithOidcMethod);
 
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
+            if (kratosUpdateRegistrationFlowWithWebAuthnMethod != null)
+                return new KratosUpdateRegistrationFlowBody(kratosUpdateRegistrationFlowWithWebAuthnMethod);
 
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
+            if (kratosUpdateRegistrationFlowWithCodeMethod != null)
+                return new KratosUpdateRegistrationFlowBody(kratosUpdateRegistrationFlowWithCodeMethod);
 
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRegistrationFlowBody();
+            if (kratosUpdateRegistrationFlowWithPasskeyMethod != null)
+                return new KratosUpdateRegistrationFlowBody(kratosUpdateRegistrationFlowWithPasskeyMethod);
 
             throw new JsonException();
         }

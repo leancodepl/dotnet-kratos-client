@@ -165,6 +165,9 @@ namespace LeanCode.Kratos.Client.Model
 
             Option<KratosUpdateRecoveryFlowBody.MethodEnum?> method = default;
 
+            KratosUpdateRecoveryFlowWithLinkMethod? kratosUpdateRecoveryFlowWithLinkMethod = null;
+            KratosUpdateRecoveryFlowWithCodeMethod? kratosUpdateRecoveryFlowWithCodeMethod = null;
+
             Utf8JsonReader utf8JsonReaderDiscriminator = utf8JsonReader;
             while (utf8JsonReaderDiscriminator.Read())
             {
@@ -183,23 +186,23 @@ namespace LeanCode.Kratos.Client.Model
                         string? discriminator = utf8JsonReaderDiscriminator.GetString();
                         if (discriminator?.Equals("code") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRecoveryFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateRecoveryFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateRecoveryFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateRecoveryFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("link") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRecoveryFlowWithLinkMethod = utf8JsonReader;
+                            kratosUpdateRecoveryFlowWithLinkMethod = JsonSerializer.Deserialize<KratosUpdateRecoveryFlowWithLinkMethod>(ref utf8JsonReaderKratosUpdateRecoveryFlowWithLinkMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRecoveryFlowWithCodeMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRecoveryFlowWithCodeMethod = utf8JsonReader;
+                            kratosUpdateRecoveryFlowWithCodeMethod = JsonSerializer.Deserialize<KratosUpdateRecoveryFlowWithCodeMethod>(ref utf8JsonReaderKratosUpdateRecoveryFlowWithCodeMethod, jsonSerializerOptions);
                         }
                         if (discriminator?.Equals("updateRecoveryFlowWithLinkMethod") ?? false)
                         {
-                            Utf8JsonReader utf8JsonReader = utf8JsonReader;
-                             = JsonSerializer.Deserialize<>(ref utf8JsonReader, jsonSerializerOptions);
+                            Utf8JsonReader utf8JsonReaderKratosUpdateRecoveryFlowWithLinkMethod = utf8JsonReader;
+                            kratosUpdateRecoveryFlowWithLinkMethod = JsonSerializer.Deserialize<KratosUpdateRecoveryFlowWithLinkMethod>(ref utf8JsonReaderKratosUpdateRecoveryFlowWithLinkMethod, jsonSerializerOptions);
                         }
                     }
                 }
@@ -237,17 +240,11 @@ namespace LeanCode.Kratos.Client.Model
             if (method.IsSet && method.Value == null)
                 throw new ArgumentNullException(nameof(method), "Property is not nullable for class KratosUpdateRecoveryFlowBody.");
 
-            if ( != null)
-                return new KratosUpdateRecoveryFlowBody();
+            if (kratosUpdateRecoveryFlowWithLinkMethod != null)
+                return new KratosUpdateRecoveryFlowBody(kratosUpdateRecoveryFlowWithLinkMethod);
 
-            if ( != null)
-                return new KratosUpdateRecoveryFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRecoveryFlowBody();
-
-            if ( != null)
-                return new KratosUpdateRecoveryFlowBody();
+            if (kratosUpdateRecoveryFlowWithCodeMethod != null)
+                return new KratosUpdateRecoveryFlowBody(kratosUpdateRecoveryFlowWithCodeMethod);
 
             throw new JsonException();
         }
