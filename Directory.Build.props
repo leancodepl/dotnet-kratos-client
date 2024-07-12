@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <DebugType>portable</DebugType>
+    <Deterministic>true</Deterministic>
+    <EmbedAllSources>true</EmbedAllSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <RepositoryCommit Condition="'$(GITHUB_SHA)' != ''">$(GITHUB_SHA)</RepositoryCommit>
+  </PropertyGroup>
+
+</Project>
