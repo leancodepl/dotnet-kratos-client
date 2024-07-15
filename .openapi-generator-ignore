@@ -23,5 +23,6 @@
 #!docs/README.md
 
 LeanCode.Kratos.Client.sln
+src/LeanCode.Kratos.Client/Client/Date*JsonConverter.cs
 src/LeanCode.Kratos.Client.Test/**
 docs/scripts/**

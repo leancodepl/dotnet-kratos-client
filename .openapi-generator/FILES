@@ -135,10 +135,6 @@ src/LeanCode.Kratos.Client/Client/ApiResponseEventArgs.cs
 src/LeanCode.Kratos.Client/Client/ApiResponse`1.cs
 src/LeanCode.Kratos.Client/Client/ClientUtils.cs
 src/LeanCode.Kratos.Client/Client/CookieContainer.cs
-src/LeanCode.Kratos.Client/Client/DateOnlyJsonConverter.cs
-src/LeanCode.Kratos.Client/Client/DateOnlyNullableJsonConverter.cs
-src/LeanCode.Kratos.Client/Client/DateTimeJsonConverter.cs
-src/LeanCode.Kratos.Client/Client/DateTimeNullableJsonConverter.cs
 src/LeanCode.Kratos.Client/Client/ExceptionEventArgs.cs
 src/LeanCode.Kratos.Client/Client/HostConfiguration.cs
 src/LeanCode.Kratos.Client/Client/JsonSerializerOptionsProvider.cs
