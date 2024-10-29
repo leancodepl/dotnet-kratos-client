@@ -10,7 +10,7 @@ $properties = @(
     'validatable=false',
     'nullableReferenceTypes=true',
     'hideGenerationTimestamp=true',
-    'packageVersion=1.2.0',
+    'packageVersion=1.2.0-fix.1',
     'packageAuthors=LeanCode',
     'packageCompany=LeanCode',
     'packageCopyright=LeanCode',
@@ -128,7 +128,7 @@ Authentication schemes defined for the API:
 
 
 ## Build
-- SDK version: 1.2.0
+- SDK version: 1.2.0-fix.1
 - Generator version: 7.7.0
 - Build package: org.openapitools.codegen.languages.CSharpClientCodegen
 
@@ -176,7 +176,7 @@ Authentication schemes defined for the API:
 - packageName: LeanCode.Kratos.Client
 - packageTags: 
 - packageTitle: Ory Kratos Client
-- packageVersion: 1.2.0
+- packageVersion: 1.2.0-fix.1
 - releaseNote: Minor update
 - returnICollection: false
 - sortParamsByRequiredFlag: 
