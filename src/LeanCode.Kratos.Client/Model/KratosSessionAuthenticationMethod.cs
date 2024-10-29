@@ -111,7 +111,12 @@ namespace LeanCode.Kratos.Client.Model
             /// <summary>
             /// Enum V06LegacySession for value: v0.6_legacy_session
             /// </summary>
-            V06LegacySession
+            V06LegacySession,
+
+            /// <summary>
+            /// Enum Passkey for value: passkey
+            /// </summary>
+            Passkey
         }
 
         /// <summary>
@@ -148,6 +153,9 @@ namespace LeanCode.Kratos.Client.Model
 
             if (value.Equals("v0.6_legacy_session"))
                 return MethodEnum.V06LegacySession;
+
+            if (value.Equals("passkey"))
+                return MethodEnum.Passkey;
 
             throw new NotImplementedException($"Could not convert value to type MethodEnum: '{value}'");
         }
@@ -186,6 +194,9 @@ namespace LeanCode.Kratos.Client.Model
             if (value.Equals("v0.6_legacy_session"))
                 return MethodEnum.V06LegacySession;
 
+            if (value.Equals("passkey"))
+                return MethodEnum.Passkey;
+
             return null;
         }
 
@@ -223,6 +234,9 @@ namespace LeanCode.Kratos.Client.Model
 
             if (value == MethodEnum.V06LegacySession)
                 return "v0.6_legacy_session";
+
+            if (value == MethodEnum.Passkey)
+                return "passkey";
 
             throw new NotImplementedException($"Value could not be handled: '{value}'");
         }

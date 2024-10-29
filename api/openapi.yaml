@@ -6576,6 +6576,7 @@ components:
           - webauthn
           - lookup_secret
           - v0.6_legacy_session
+          - passkey
           title: The method used
           type: string
         organization:
