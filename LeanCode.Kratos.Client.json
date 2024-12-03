@@ -18,10 +18,9 @@
   "packageGuid": "{00000000-0000-0000-0000-000000000000}",
   "packageTitle": "Ory Kratos Client",
   "packageName": "LeanCode.Kratos.Client",
-  "packageVersion": "1.2.0-fix.1",
-  "targetFramework": "net8.0",
+  "packageVersion": "1.2.0-fix.2",
+  "targetFramework": "net8.0;net9.0",
   "useSourceGeneration": false,
   "validatable": false,
   "zeroBasedEnums": true
 }
-  
