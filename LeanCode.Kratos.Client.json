@@ -1,5 +1,5 @@
 {
-  "inputSpec": "api/openapi.yaml",
+  "inputSpec": "https://raw.githubusercontent.com/ory/sdk/master/spec/kratos/v25.4.0.json",
   "generatorName": "csharp",
   "library": "generichost",
   "allowUnicodeIdentifiers": true,
@@ -18,8 +18,8 @@
   "packageGuid": "{00000000-0000-0000-0000-000000000000}",
   "packageTitle": "Ory Kratos Client",
   "packageName": "LeanCode.Kratos.Client",
-  "packageVersion": "1.2.0-fix.2",
-  "targetFramework": "net8.0;net9.0",
+  "packageVersion": "25.4.0",
+  "targetFramework": "net8.0;net9.0;net10.0",
   "useSourceGeneration": false,
   "validatable": false,
   "zeroBasedEnums": true
