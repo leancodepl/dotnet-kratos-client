@@ -12,6 +12,7 @@ docs/models/KratosConsistencyRequestParameters.md
 docs/models/KratosContinueWith.md
 docs/models/KratosContinueWithRecoveryUi.md
 docs/models/KratosContinueWithRecoveryUiFlow.md
+docs/models/KratosContinueWithRedirectBrowserTo.md
 docs/models/KratosContinueWithSetOrySessionToken.md
 docs/models/KratosContinueWithSettingsUi.md
 docs/models/KratosContinueWithSettingsUiFlow.md
@@ -19,6 +20,7 @@ docs/models/KratosContinueWithVerificationUi.md
 docs/models/KratosContinueWithVerificationUiFlow.md
 docs/models/KratosCourierMessageStatus.md
 docs/models/KratosCourierMessageType.md
+docs/models/KratosCreateFedcmFlowResponse.md
 docs/models/KratosCreateIdentityBody.md
 docs/models/KratosCreateRecoveryCodeForIdentityBody.md
 docs/models/KratosCreateRecoveryLinkForIdentityBody.md
@@ -35,6 +37,7 @@ docs/models/KratosHealthStatus.md
 docs/models/KratosIdentity.md
 docs/models/KratosIdentityCredentials.md
 docs/models/KratosIdentityCredentialsCode.md
+docs/models/KratosIdentityCredentialsCodeAddress.md
 docs/models/KratosIdentityCredentialsOidc.md
 docs/models/KratosIdentityCredentialsOidcProvider.md
 docs/models/KratosIdentityCredentialsPassword.md
@@ -47,6 +50,9 @@ docs/models/KratosIdentityWithCredentialsOidcConfig.md
 docs/models/KratosIdentityWithCredentialsOidcConfigProvider.md
 docs/models/KratosIdentityWithCredentialsPassword.md
 docs/models/KratosIdentityWithCredentialsPasswordConfig.md
+docs/models/KratosIdentityWithCredentialsSaml.md
+docs/models/KratosIdentityWithCredentialsSamlConfig.md
+docs/models/KratosIdentityWithCredentialsSamlConfigProvider.md
 docs/models/KratosIsAlive200Response.md
 docs/models/KratosIsReady503Response.md
 docs/models/KratosJsonPatch.md
@@ -61,6 +67,7 @@ docs/models/KratosOAuth2ConsentRequestOpenIDConnectContext.md
 docs/models/KratosOAuth2LoginRequest.md
 docs/models/KratosPatchIdentitiesBody.md
 docs/models/KratosPerformNativeLogoutBody.md
+docs/models/KratosProvider.md
 docs/models/KratosRecoveryCodeForIdentity.md
 docs/models/KratosRecoveryFlow.md
 docs/models/KratosRecoveryFlowState.md
@@ -83,19 +90,23 @@ docs/models/KratosUiContainer.md
 docs/models/KratosUiNode.md
 docs/models/KratosUiNodeAnchorAttributes.md
 docs/models/KratosUiNodeAttributes.md
+docs/models/KratosUiNodeDivisionAttributes.md
 docs/models/KratosUiNodeImageAttributes.md
 docs/models/KratosUiNodeInputAttributes.md
 docs/models/KratosUiNodeMeta.md
 docs/models/KratosUiNodeScriptAttributes.md
 docs/models/KratosUiNodeTextAttributes.md
 docs/models/KratosUiText.md
+docs/models/KratosUpdateFedcmFlowBody.md
 docs/models/KratosUpdateIdentityBody.md
 docs/models/KratosUpdateLoginFlowBody.md
 docs/models/KratosUpdateLoginFlowWithCodeMethod.md
+docs/models/KratosUpdateLoginFlowWithIdentifierFirstMethod.md
 docs/models/KratosUpdateLoginFlowWithLookupSecretMethod.md
 docs/models/KratosUpdateLoginFlowWithOidcMethod.md
 docs/models/KratosUpdateLoginFlowWithPasskeyMethod.md
 docs/models/KratosUpdateLoginFlowWithPasswordMethod.md
+docs/models/KratosUpdateLoginFlowWithSamlMethod.md
 docs/models/KratosUpdateLoginFlowWithTotpMethod.md
 docs/models/KratosUpdateLoginFlowWithWebAuthnMethod.md
 docs/models/KratosUpdateRecoveryFlowBody.md
@@ -107,6 +118,7 @@ docs/models/KratosUpdateRegistrationFlowWithOidcMethod.md
 docs/models/KratosUpdateRegistrationFlowWithPasskeyMethod.md
 docs/models/KratosUpdateRegistrationFlowWithPasswordMethod.md
 docs/models/KratosUpdateRegistrationFlowWithProfileMethod.md
+docs/models/KratosUpdateRegistrationFlowWithSamlMethod.md
 docs/models/KratosUpdateRegistrationFlowWithWebAuthnMethod.md
 docs/models/KratosUpdateSettingsFlowBody.md
 docs/models/KratosUpdateSettingsFlowWithLookupMethod.md
@@ -114,6 +126,7 @@ docs/models/KratosUpdateSettingsFlowWithOidcMethod.md
 docs/models/KratosUpdateSettingsFlowWithPasskeyMethod.md
 docs/models/KratosUpdateSettingsFlowWithPasswordMethod.md
 docs/models/KratosUpdateSettingsFlowWithProfileMethod.md
+docs/models/KratosUpdateSettingsFlowWithSamlMethod.md
 docs/models/KratosUpdateSettingsFlowWithTotpMethod.md
 docs/models/KratosUpdateSettingsFlowWithWebAuthnMethod.md
 docs/models/KratosUpdateVerificationFlowBody.md
@@ -153,6 +166,7 @@ src/LeanCode.Kratos.Client/Model/KratosConsistencyRequestParameters.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWith.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithRecoveryUi.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithRecoveryUiFlow.cs
+src/LeanCode.Kratos.Client/Model/KratosContinueWithRedirectBrowserTo.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithSetOrySessionToken.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithSettingsUi.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithSettingsUiFlow.cs
@@ -160,6 +174,7 @@ src/LeanCode.Kratos.Client/Model/KratosContinueWithVerificationUi.cs
 src/LeanCode.Kratos.Client/Model/KratosContinueWithVerificationUiFlow.cs
 src/LeanCode.Kratos.Client/Model/KratosCourierMessageStatus.cs
 src/LeanCode.Kratos.Client/Model/KratosCourierMessageType.cs
+src/LeanCode.Kratos.Client/Model/KratosCreateFedcmFlowResponse.cs
 src/LeanCode.Kratos.Client/Model/KratosCreateIdentityBody.cs
 src/LeanCode.Kratos.Client/Model/KratosCreateRecoveryCodeForIdentityBody.cs
 src/LeanCode.Kratos.Client/Model/KratosCreateRecoveryLinkForIdentityBody.cs
@@ -176,6 +191,7 @@ src/LeanCode.Kratos.Client/Model/KratosHealthStatus.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentity.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityCredentials.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityCredentialsCode.cs
+src/LeanCode.Kratos.Client/Model/KratosIdentityCredentialsCodeAddress.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityCredentialsOidc.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityCredentialsOidcProvider.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityCredentialsPassword.cs
@@ -188,6 +204,9 @@ src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsOidcConfig.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsOidcConfigProvider.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsPassword.cs
 src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsPasswordConfig.cs
+src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsSaml.cs
+src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsSamlConfig.cs
+src/LeanCode.Kratos.Client/Model/KratosIdentityWithCredentialsSamlConfigProvider.cs
 src/LeanCode.Kratos.Client/Model/KratosIsAlive200Response.cs
 src/LeanCode.Kratos.Client/Model/KratosIsReady503Response.cs
 src/LeanCode.Kratos.Client/Model/KratosJsonPatch.cs
@@ -202,6 +221,7 @@ src/LeanCode.Kratos.Client/Model/KratosOAuth2ConsentRequestOpenIDConnectContext.
 src/LeanCode.Kratos.Client/Model/KratosOAuth2LoginRequest.cs
 src/LeanCode.Kratos.Client/Model/KratosPatchIdentitiesBody.cs
 src/LeanCode.Kratos.Client/Model/KratosPerformNativeLogoutBody.cs
+src/LeanCode.Kratos.Client/Model/KratosProvider.cs
 src/LeanCode.Kratos.Client/Model/KratosRecoveryCodeForIdentity.cs
 src/LeanCode.Kratos.Client/Model/KratosRecoveryFlow.cs
 src/LeanCode.Kratos.Client/Model/KratosRecoveryFlowState.cs
@@ -224,19 +244,23 @@ src/LeanCode.Kratos.Client/Model/KratosUiContainer.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNode.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeAnchorAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeAttributes.cs
+src/LeanCode.Kratos.Client/Model/KratosUiNodeDivisionAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeImageAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeInputAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeMeta.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeScriptAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiNodeTextAttributes.cs
 src/LeanCode.Kratos.Client/Model/KratosUiText.cs
+src/LeanCode.Kratos.Client/Model/KratosUpdateFedcmFlowBody.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateIdentityBody.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowBody.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithCodeMethod.cs
+src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithIdentifierFirstMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithLookupSecretMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithOidcMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithPasskeyMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithPasswordMethod.cs
+src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithSamlMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithTotpMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateLoginFlowWithWebAuthnMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateRecoveryFlowBody.cs
@@ -248,6 +272,7 @@ src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithOidcMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithPasskeyMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithPasswordMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithProfileMethod.cs
+src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithSamlMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateRegistrationFlowWithWebAuthnMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowBody.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithLookupMethod.cs
@@ -255,6 +280,7 @@ src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithOidcMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithPasskeyMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithPasswordMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithProfileMethod.cs
+src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithSamlMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithTotpMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateSettingsFlowWithWebAuthnMethod.cs
 src/LeanCode.Kratos.Client/Model/KratosUpdateVerificationFlowBody.cs
