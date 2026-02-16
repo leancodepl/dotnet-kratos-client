@@ -8,21 +8,17 @@ namespace LeanCode.Kratos.Client.Client;
 
 #pragma warning disable CS1591
 
-public class NullTokenProvider : TokenProvider<ApiKeyToken>
+public class NullTokenProvider() : TokenProvider<ApiKeyToken>([new NullApiKeyToken()])
 {
     public static NullTokenProvider Instance { get; } = new();
 
-    public NullTokenProvider()
-        : base(new[] { new NullApiKeyToken() }) { }
+    protected internal override ValueTask<ApiKeyToken> GetAsync(
+        string header = "",
+        CancellationToken cancellation = default
+    ) => new(_tokens[0]);
 
-    internal override ValueTask<ApiKeyToken> GetAsync(string header = "", CancellationToken cancellation = default) =>
-        new(_tokens[0]);
-
-    private sealed class NullApiKeyToken : ApiKeyToken
+    private sealed class NullApiKeyToken() : ApiKeyToken(string.Empty, default, string.Empty)
     {
-        public NullApiKeyToken()
-            : base(string.Empty, default) { }
-
         public override void UseInHeader(HttpRequestMessage request) { }
 
         public override void UseInQuery(

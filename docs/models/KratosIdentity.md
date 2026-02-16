@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **SchemaUrl** | **string** | SchemaURL is the URL of the endpoint where the identity&#39;s traits schema can be fetched from.  format: url | 
 **CreatedAt** | **DateTime** | CreatedAt is a helper struct field for gobuffalo.pop. | [optional] 
 **Credentials** | [**Dictionary&lt;string, KratosIdentityCredentials&gt;**](KratosIdentityCredentials.md) | Credentials represents all credentials that can be used for authenticating this identity. | [optional] 
+**ExternalId** | **string** | ExternalID is an optional external ID of the identity. This is used to link the identity to an external system. If set, the external ID must be unique across all identities. | [optional] 
 **MetadataAdmin** | **Object** | NullJSONRawMessage represents a json.RawMessage that works well with JSON, SQL, and Swagger and is NULLable- | [optional] 
 **MetadataPublic** | **Object** | NullJSONRawMessage represents a json.RawMessage that works well with JSON, SQL, and Swagger and is NULLable- | [optional] 
 **OrganizationId** | **string** |  | [optional] 

@@ -16,60 +16,6 @@ Return Running Software Version.
 
 This endpoint returns the version of Ory Kratos.  If the service supports TLS Edge Termination, this endpoint does not require the `X-Forwarded-Proto` header to be set.  Be aware that if you are running multiple nodes of this service, the version will never refer to the cluster state, only to a single instance.
 
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using LeanCode.Kratos.Client.Api;
-using LeanCode.Kratos.Client.Client;
-using LeanCode.Kratos.Client.Model;
-
-namespace Example
-{
-    public class GetVersionExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new MetadataApi(config);
-
-            try
-            {
-                // Return Running Software Version.
-                KratosGetVersion200Response result = apiInstance.GetVersion();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling MetadataApi.GetVersion: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the GetVersionWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Return Running Software Version.
-    ApiResponse<KratosGetVersion200Response> response = apiInstance.GetVersionWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling MetadataApi.GetVersionWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -102,60 +48,6 @@ Check HTTP Server Status
 
 This endpoint returns a HTTP 200 status code when Ory Kratos is accepting incoming HTTP requests. This status does currently not include checks whether the database connection is working.  If the service supports TLS Edge Termination, this endpoint does not require the `X-Forwarded-Proto` header to be set.  Be aware that if you are running multiple nodes of this service, the health status will never refer to the cluster state, only to a single instance.
 
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using LeanCode.Kratos.Client.Api;
-using LeanCode.Kratos.Client.Client;
-using LeanCode.Kratos.Client.Model;
-
-namespace Example
-{
-    public class IsAliveExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new MetadataApi(config);
-
-            try
-            {
-                // Check HTTP Server Status
-                KratosIsAlive200Response result = apiInstance.IsAlive();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling MetadataApi.IsAlive: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the IsAliveWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Check HTTP Server Status
-    ApiResponse<KratosIsAlive200Response> response = apiInstance.IsAliveWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling MetadataApi.IsAliveWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -189,60 +81,6 @@ Check HTTP Server and Database Status
 
 This endpoint returns a HTTP 200 status code when Ory Kratos is up running and the environment dependencies (e.g. the database) are responsive as well.  If the service supports TLS Edge Termination, this endpoint does not require the `X-Forwarded-Proto` header to be set.  Be aware that if you are running multiple nodes of Ory Kratos, the health status will never refer to the cluster state, only to a single instance.
 
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using LeanCode.Kratos.Client.Api;
-using LeanCode.Kratos.Client.Client;
-using LeanCode.Kratos.Client.Model;
-
-namespace Example
-{
-    public class IsReadyExample
-    {
-        public static void Main()
-        {
-            Configuration config = new Configuration();
-            config.BasePath = "http://localhost";
-            var apiInstance = new MetadataApi(config);
-
-            try
-            {
-                // Check HTTP Server and Database Status
-                KratosIsAlive200Response result = apiInstance.IsReady();
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling MetadataApi.IsReady: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-#### Using the IsReadyWithHttpInfo variant
-This returns an ApiResponse object which contains the response data, status code and headers.
-
-```csharp
-try
-{
-    // Check HTTP Server and Database Status
-    ApiResponse<KratosIsAlive200Response> response = apiInstance.IsReadyWithHttpInfo();
-    Debug.Write("Status Code: " + response.StatusCode);
-    Debug.Write("Response Headers: " + response.Headers);
-    Debug.Write("Response Body: " + response.Data);
-}
-catch (ApiException e)
-{
-    Debug.Print("Exception when calling MetadataApi.IsReadyWithHttpInfo: " + e.Message);
-    Debug.Print("Status Code: " + e.ErrorCode);
-    Debug.Print(e.StackTrace);
-}
-```
 
 ### Parameters
 This endpoint does not need any parameter.
